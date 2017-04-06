@@ -23,9 +23,9 @@ def category_detail(request, slug):
 
 
 def product_detail(request, slug):
-    product_object = get_object_or_404(Product, slug=slug)
-    product = product_object.categories.filter(is_active=True)
+    product_object = Product.objects.get(slug=slug)
+    # product = product_object.categories.filter(is_active=True)
     context={
-        'product': product,
+        'product': product_object,
     }
     return render(request, 'product_detail.html', context)

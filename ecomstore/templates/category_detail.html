@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for rel_pro in related_product%}
+        <a href="{{ rel_pro.get_absolute_url }}">{{ rel_pro.name }}</a>  </br>
+    {% endfor %}
+
+{% endblock %}

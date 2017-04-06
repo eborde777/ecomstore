@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div style="float: left; background-color: #777777; width: 40%;">
+    <h1>Category : {{ product.categories }}</h1><br/>
+    <img src="{{ product.image }}"/> <br/>
+    </div>
+
+    <div style="float: right; background-color: #79aec8; width: 60%">
+    <p>{{ product.name }}</p><br/>
+    <p>{{ product.description }}</p><br/>
+    <p>{{ product.brand }}</p><br/>
+    <p>{{ product.sku }}</p><br/>
+    <p>{{ product.price }}</p><br/>
+    <p>{{ product.old_price }}</p><br/>
+    <p>{{ product.quantity }}</p><br/>
+
+    </div>
+
+
+{% endblock %}
